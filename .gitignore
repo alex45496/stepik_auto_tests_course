@@ -7,3 +7,12 @@
 .venv
 env/
 venv/
+
+# Скомпилированные файлы (Byte-compiled / optimized / DLL files)
+*__pycache__/
+*.рус
+*.html
+.pytest_cache/
+
+# log
+logs
