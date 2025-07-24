@@ -3,19 +3,20 @@
 import time
 from selenium.webdriver.common.by import By
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.options import Options as Firefox_Options
+from selenium.webdriver.chrome.options import Options as Chrome_Options
 
 
 # Задать язык для браузера Google
-# options = Options()
-# options.add_experimental_option('prefs', {'intl.accept_languages': 'en'})
-# browser = webdriver.Chrome(options=options)
+options = Chrome_Options()
+options.add_experimental_option('prefs', {'intl.accept_languages': 'fr'})
+browser = webdriver.Chrome(options=options)
 
 
 # Задать язык для браузера FireFox
-options = Options()
-options.set_preference("intl.accept_languages", 'ru')
-browser = webdriver.Firefox(options=options)
+# options = Firefox_Options()
+# options.set_preference("intl.accept_languages", 'ru')
+# browser = webdriver.Firefox(options=options)
 
 
 link = "http://selenium1py.pythonanywhere.com/"
