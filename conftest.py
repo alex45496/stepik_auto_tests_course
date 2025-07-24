@@ -17,11 +17,11 @@ def browser(request):
     browser = None
     if browser_name == "chrome":
         options = Chrome_Options()
-        options.add_experimental_option('prefs', {'intl.accept_languages': f'{language}'})
+        options.add_experimental_option('prefs', {'intl.accept_languages': language})
         browser = webdriver.Chrome(options=options)
     elif browser_name == "firefox":
         options_firefox = Firefox_Options()
-        options_firefox.set_preference("intl.accept_languages", f'{language}')
+        options_firefox.set_preference("intl.accept_languages", language)
         browser = webdriver.Firefox(options=options_firefox)
     yield browser
     print("\nquit browser..")
